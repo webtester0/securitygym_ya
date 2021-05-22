@@ -1,0 +1,16 @@
+curl -X POST -H "X-Meme-Service-Token: 123" -d "bobsing" http://localhost:8000/api/v1/private_meme/upload
+
+curl -H "X-Meme-Service-Token: 123" http://localhost:8000/api/v1/private_meme/view/1
+
+
+
+After fix:
+
+upload a new meme:
+curl -X POST -H "X-Meme-Service-Token: 123" -d "bobsing" http://localhost:8000/api/v1/private_meme/upload
+
+test without token: 
+curl  http://localhost:8000/api/v1/private_meme/view/1
+
+test with token: 
+curl -H "X-Meme-Service-Token: 123" http://localhost:8000/api/v1/private_meme/view/1 
